@@ -29,3 +29,10 @@ Incluye la estructura de carpetas y archivos fuente listos para copiar/pegar.
 ```bash
 node -v
 npm -v
+```
+
+---
+
+## Guia de Instalación
+
+👉 [Creación e Instalación de Dependencias](./Instalacion/Dependencias.md)
