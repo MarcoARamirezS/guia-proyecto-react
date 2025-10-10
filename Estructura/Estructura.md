@@ -56,3 +56,4 @@ frontend-empleados/
 ## Home
 
 👉 [Home](./../README.md)
+👉 [Configuración](./../Configuracion/Configuracion.md)
