@@ -127,11 +127,55 @@ body {
 | **`html, body, #root`**    | Asegura que toda la aplicación ocupe el 100% del alto de la ventana.                                               |
 | **`body { @apply ... }`**  | Usa la directiva `@apply` de Tailwind para aplicar utilidades directamente en CSS (`bg-base-200`, `text-neutral`). |
 
+---
+
 ### 🧩 Archivo ENV `.env`
 
 ```bash
 VITE_API_BASE_URL=http://localhost:5050/api/v1
 ```
+
+---
+
+## ⚙️ Archivo `vite.config.ts`
+
+El archivo `vite.config.ts` define la configuración principal del entorno de desarrollo y build del proyecto.  
+Controla los **plugins**, el **servidor local**, los **alias de rutas** y variables globales para compatibilidad con librerías.
+
+---
+
+### 📄 Código base
+
+```ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173,           // Puedes cambiarlo si lo necesitas
+    open: true,           // Abre automáticamente en el navegador
+  },
+  define: {
+    'process.env': {}     // Evita errores con librerías que usan process.env
+  },
+  resolve: {
+    alias: {
+      '@': '/src',        // Para importar con @/ en lugar de rutas largas
+    },
+  },
+})
+```
+
+### 🧩 Explicación del archivo `vite.config.ts`
+
+| Propiedad           | Descripción                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **`plugins`**       | Define los complementos que usará Vite. Aquí se incluye `@vitejs/plugin-react` para soporte completo de React y JSX. |
+| **`server`**        | Configura el servidor de desarrollo local (`vite dev`). Permite definir puerto, CORS, apertura automática, etc.      |
+| **`define`**        | Agrega variables globales. Aquí se usa `'process.env': {}` para evitar errores con librerías que esperan Node.js.    |
+| **`resolve.alias`** | Crea atajos para rutas. El alias `@` apunta a `/src`, facilitando importaciones como `@/components/Button`.          |
 
 ---
 
