@@ -182,3 +182,4 @@ export default defineConfig({
 ## Home
 
 👉 [Home](./../README.md)
+👉 [Tipos](./../src/types/Empleado.md)
