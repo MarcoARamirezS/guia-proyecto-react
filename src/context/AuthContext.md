@@ -99,4 +99,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 ## Home
 
 👉 [Home](./../../README.md)
-👉 [Context](./../services/)
+👉 [Services](./../services/)
