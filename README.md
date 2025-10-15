@@ -38,3 +38,6 @@ npm -v
 - 👉 [Creación e Instalación de Dependencias](./Instalacion/Dependencias.md)
 - 👉 [Estructura del Proyecto](./Estructura/Estructura.md)
 - 👉 [Configuración del Proyecto](./Configuracion/Configuracion.md)
+- 👉 [Tipos](./src/types/Empleado.md)
+- 👉 [Context](./src/context/AuthContext.md)
+- 👉 [Services](./src/services/)
